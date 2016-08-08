@@ -1,5 +1,7 @@
 ---
-- hosts: localhost
-  remote_user: root
-  roles:
-    - github-role-project-name
+- name: Hello Ansible - quick start
+  hosts: localhost
+
+  tasks:
+    - name: Hello server
+      shell: echo "HELLO WORLD"
