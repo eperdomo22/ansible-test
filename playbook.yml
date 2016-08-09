@@ -6,7 +6,7 @@
 #    Levanta un servicio de docker-compose
 -
   hosts: all
- 
+  become: true 
   tasks:
     - name: stop docker-compose service
       docker_service: project_src=./ state=absent 
