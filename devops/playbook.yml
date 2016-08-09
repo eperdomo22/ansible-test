@@ -9,10 +9,10 @@
   become: true 
   tasks:
     - name: stop docker-compose service
-      docker_service: project_src=./ state=absent 
+      docker_service: project_src=./devops state=absent 
 
     - name: start
-      docker_service: project_src=./ build=yes
+      docker_service: project_src=./devops build=yes
       register: output
 
     - name: debug
