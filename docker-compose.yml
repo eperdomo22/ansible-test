@@ -9,9 +9,6 @@ services:
   mem_limit: "1G"
   cpuset: "2"
   command: "/usr/sbin/init"
-  ports:
-    - "8120:80"
-    - "22070:22"
   volumes:
     - /sys/fs/cgroup:/sys/fs/cgroup:ro
   environment:
