@@ -9,10 +9,10 @@
  
   tasks:
     - name: stop docker-compose service
-      docker_service: project_src=/home/ereyes/proyectos/wrap/docker-teravision/wrapbase state=absent 
+      docker_service: project_src=compose.yml state=absent 
 
     - name: start
-      docker_service: project_src=/home/ereyes/proyectos/wrap/docker-teravision/wrapbase build=yes
+      docker_service: project_src=compose.yml build=yes
       register: output
 
     - name: debug
