@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+ ansibletest:
+  container_name: ansible-test
+  hostname: ansible_test
+  image: teravisiontech/lampbase
+  privileged: true
+  mem_limit: "1G"
+  cpuset: "2"
+  command: "/usr/sbin/init"
+  ports:
+    - "8120:80"
+    - "22070:22"
+  volumes:
+    - /sys/fs/cgroup:/sys/fs/cgroup:ro
+  environment:
+    - CONTAINER=docker
