@@ -9,10 +9,10 @@
  
   tasks:
     - name: stop docker-compose service
-      docker_service: project_src=compose.yml state=absent 
+      docker_service: project_src=./ state=absent 
 
     - name: start
-      docker_service: project_src=compose.yml build=yes
+      docker_service: project_src=./ build=yes
       register: output
 
     - name: debug
