@@ -1,0 +1,19 @@
+---
+
+# Overview: Playbook para probar el módulo de docker service
+# Applies to: Development
+# Description:
+#    Levanta un servicio de docker-compose
+-
+  hosts: all
+ 
+  tasks:
+    - name: stop docker-compose service
+      docker_service: project_src=/home/ereyes/proyectos/wrap/docker-teravision/wrapbase state=absent 
+
+    - name: start
+      docker_service: project_src=/home/ereyes/proyectos/wrap/docker-teravision/wrapbase build=yes
+      register: output
+
+    - name: debug
+      debug: var=output verbosity=3
