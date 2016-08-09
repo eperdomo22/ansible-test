@@ -11,7 +11,7 @@ services:
   command: "/usr/sbin/init"
   volumes:
     - /sys/fs/cgroup:/sys/fs/cgroup:ro
-    - ./app:/var/www/html
+    - ../app:/var/www/html
   environment:
     - CONTAINER=docker
   ports:
