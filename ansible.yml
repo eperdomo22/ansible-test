@@ -1,7 +1,0 @@
----
-- name: Hello Ansible - quick start
-  hosts: localhost
-
-  tasks:
-    - name: Hello server
-      shell: echo "HELLO WORLD"

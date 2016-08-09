@@ -13,3 +13,5 @@ services:
     - /sys/fs/cgroup:/sys/fs/cgroup:ro
   environment:
     - CONTAINER=docker
+  ports:
+    - "8130:80"
