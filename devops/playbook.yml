@@ -23,7 +23,7 @@
   tasks:
     - name: test
       shell: echo "HELLO PABLO" >> /tmp/test2.txt
-- host: all
+- hosts: all
   tags: ['service']
   task:
     - name: down mysql
