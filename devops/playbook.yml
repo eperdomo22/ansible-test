@@ -4,9 +4,9 @@
 # Applies to: Development
 # Description:
 #    Levanta un servicio de docker-compose
--
-  hosts: all
+- hosts: all
   become: true 
+  tags: ['deploy']
   tasks:
     - name: stop docker-compose service
       docker_service: project_src=./devops state=absent 
@@ -17,3 +17,9 @@
 
     - name: debug
       debug: var=output verbosity=3
+- hosts: all
+  become: true
+  tags: ['command']
+  tasks:
+    - name: test
+      shell: echo "HELLO PABLO" >> test.txt

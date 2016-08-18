@@ -2,9 +2,10 @@ version: '2'
 
 services:
  ansibletest:
+  build:
+   context: .
   container_name: ansible-test
   hostname: ansible_test
-  image: teravisiontech/lampbase
   privileged: true
   mem_limit: "1G"
   cpuset: "2"
