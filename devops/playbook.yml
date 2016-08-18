@@ -13,6 +13,7 @@
 
     - name: start
       docker_service: project_src=./devops build=yes
+      build: yes
       register: output
 
     - name: debug
