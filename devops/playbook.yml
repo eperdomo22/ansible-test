@@ -27,5 +27,5 @@
   tags: ['service']
   tasks:
     - name: up init
-      shel: /usr/sbin/init
-      shell: echo "finished" >> /tmp/test2.txt 
+      shell: /usr/sbin/init
+    - shell: echo "finished" >> /tmp/test2.txt 
