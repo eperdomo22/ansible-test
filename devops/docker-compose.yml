@@ -17,4 +17,4 @@ services:
     - CONTAINER=docker
   ports:
     - "8130:80"
-  command:  ansible-playbook -i "localhost," -c local -t service /tmp/playbook.yml
+  command: "ansible-playbook -i 'localhost,' -c local -t service /tmp/playbook.yml"
