@@ -27,6 +27,6 @@
   tags: ['service']
   tasks:
     - name: down mysql
-      command: systemctl stop mariadb
+      command: systemctl start mariadb
     - name: service end
       shell: echo "finished" >> /tmp/test2.txt 

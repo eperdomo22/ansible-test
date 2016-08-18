@@ -9,7 +9,7 @@ services:
   privileged: true
   mem_limit: "1G"
   cpuset: "2"
-  command: "/usr/sbin/init"
+#  command: "/usr/sbin/init"
   volumes:
     - /sys/fs/cgroup:/sys/fs/cgroup:ro
     - ../app:/var/www/html
