@@ -12,7 +12,7 @@
       docker_service: project_src=./devops state=absent 
 
     - name: start
-      docker_service: project_src=./devops build=yes nocache
+      docker_service: project_src=./devops build=yes
       register: output
 
     - name: debug
@@ -22,4 +22,4 @@
   tags: ['command']
   tasks:
     - name: test
-      shell: echo "HELLO PABLO" >> test.txt
+      shell: echo "HELLO PABLO" >> /tmp/test2.txt
