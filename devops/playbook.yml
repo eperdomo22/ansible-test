@@ -12,7 +12,7 @@
       docker_service: project_src=./devops state=absent 
 
     - name: start
-      docker_service: project_src=./devops build=yes
+      docker_service: project_src=./devops build=yes nocache
       register: output
 
     - name: debug
