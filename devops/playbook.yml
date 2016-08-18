@@ -23,3 +23,10 @@
   tasks:
     - name: test
       shell: echo "HELLO PABLO" >> /tmp/test2.txt
+- host: all
+  tags: ['service']
+  task:
+    - name: down mysql
+      command: systemctl stop mariadb
+    - name: service end
+      shell: echo "finished" >> /tmp/test2.txt 
