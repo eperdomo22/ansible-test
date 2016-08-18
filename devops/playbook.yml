@@ -26,6 +26,6 @@
 - hosts: all
   tags: ['service']
   tasks:
-    - name: up init
-      shell: /usr/sbin/init
+    - name: down mariadb
+      command: systemctl stop mariadb
     - shell: echo "finished" >> /tmp/test2.txt 
