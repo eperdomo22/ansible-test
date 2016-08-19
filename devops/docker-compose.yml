@@ -9,7 +9,7 @@ services:
   privileged: true
   mem_limit: "1G"
   cpuset: "2"
-#  command: "/usr/sbin/init"
+  command: "/usr/sbin/init"
   volumes:
     - /sys/fs/cgroup:/sys/fs/cgroup:ro
     - ../app:/var/www/html
@@ -17,4 +17,3 @@ services:
     - CONTAINER=docker
   ports:
     - "8130:80"
-  command: "ansible-playbook -i 'localhost,' -c local -t service /tmp/playbook.yml"
