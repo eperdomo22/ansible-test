@@ -23,6 +23,8 @@
   tasks:
     - name: test
       shell: echo "HELLO PABLO" >> /tmp/test2.txt
+    - name: install
+      yum: name=htop state=present
 - hosts: all
   tags: ['service']
   tasks:
