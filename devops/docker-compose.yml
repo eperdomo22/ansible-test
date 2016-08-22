@@ -15,5 +15,6 @@ services:
     - ../app:/var/www/html
   environment:
     - CONTAINER=docker
+    - TERM=xterm
   ports:
     - "8130:80"
