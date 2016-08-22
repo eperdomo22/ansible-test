@@ -31,6 +31,5 @@
     - name: down mariadb
       command: systemctl stop mariadb
     - shell: echo "finished" >> /tmp/test2.txt
-  tasks:
-     - name: Configure MariaDB
+    - name: Configure MariaDB
        template: src=my.cnf.j2 dest=/etc/mysql/my.cnf 
