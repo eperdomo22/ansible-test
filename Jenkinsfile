@@ -13,7 +13,6 @@ pipeline {
     }
     stage('test3') {
       steps {
-        retry(count: 2)
         input(message: 'TEST-ok', ok: 'test')
       }
     }
