@@ -6,5 +6,15 @@ pipeline {
         echo 'hello world'
       }
     }
+    stage('build') {
+      steps {
+        pwd()
+      }
+    }
+    stage('docker') {
+      steps {
+        library 'DOCKERLIB'
+      }
+    }
   }
 }
