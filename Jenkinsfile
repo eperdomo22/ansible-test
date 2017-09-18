@@ -14,6 +14,7 @@ pipeline {
     stage('test3') {
       steps {
         input(message: 'TEST-ok', ok: 'test')
+        build 'terawebdev'
       }
     }
   }
