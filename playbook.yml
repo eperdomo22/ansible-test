@@ -13,4 +13,4 @@
              mode: 0755
              recurse: yes
              path:  /tmp
-state: directory
+             state: directory
