@@ -1,0 +1,15 @@
+---
+# createDirectory.yml
+# create a directory and assign permissions to a user
+- name: create directory
+  tasks:
+        - name: add a directory
+          # set directory attributes.  
+          # using lnxcfg as example user/group
+          file:
+             owner: lnxcfg #put in what ever user you need
+             group: lnxcfg #put in what ever group you need
+             mode: 0755
+             recurse: yes
+             path:  /var/ansible_directory
+             state: directory
