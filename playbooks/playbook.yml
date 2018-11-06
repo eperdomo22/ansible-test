@@ -1,7 +1,8 @@
 ---
 # createDirectory.yml
 # create a directory and assign permissions to a user
-
+- name: createDir
+  hosts: all
   tasks:
         - name: add a directory
           # set directory attributes.  
