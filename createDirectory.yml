@@ -1,0 +1,15 @@
+---
+# createDirectory.yml
+# create a directory and assign permissions to a user
+
+  tasks:
+        - name: add a directory
+          # set directory attributes.  
+          # using lnxcfg as example user/group
+          file:
+             owner: cloud_user #put in what ever user you need
+             group: cloud_user #put in what ever group you need
+             mode: 0755
+             recurse: yes
+             path:  /tmp
+             state: directory
